@@ -28,3 +28,4 @@ General idea:
 - Serde reads the data into structs which are stored into a vector and returned
 - Then we iterate over the vector and based on each transaction we either create a new client struct or modify an existing one: the client structs are stored in a hashmap where key = client_id and value = client struct
 - For disputes, chargebacks, and resolves, we reference the disputes hasmap in each client struct where key = disputed tx and value = transaction amount
+- Finally, go through hashmap after looking at the final transaction and write the csv to stdout
